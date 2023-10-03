@@ -1,5 +1,6 @@
+<img src="PriceMeHome.png" />
+
 # PriceMe 🛒
-<img src="https://drive.google.com/file/d/1jvhUYwfXcxWg-HmjjZHKRdZbUk_-EEtL/view?usp=sharing" />
 PriceMe is a powerful web application that helps you stay updated on the latest prices of your favorite Amazon products. With PriceMe, you can receive email notifications as soon as a product's price drops, keeping you informed and saving you money. This project leverages a variety of technologies to provide a seamless and efficient user experience.
 
 ## Features ⚙️
