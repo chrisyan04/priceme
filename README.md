@@ -5,6 +5,8 @@ PriceMe is a powerful web application that helps you stay updated on the latest 
 
 ## Features ⚙️
 
+<img src="PriceMeEx.png" />
+
 - <strong>Email Notifications</strong>: PriceMe allows you to receive email updates as soon as the price of a product you're interested in drops. We use NodeMailer to ensure that you are always informed of the latest deals.
 - <strong>CAPTCHA Bypass</strong>: We make use of Bright Data to get past CAPTCHAs and other website blocking mechanisms, ensuring that our web scraping remains uninterrupted and reliable.
 - <strong>Web Scraping</strong>: PriceMe webscrapes Amazon for product information, including product name, star ratings, reviews, and prices. This data is essential for providing you with up-to-date information on your favorite products.
