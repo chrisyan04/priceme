@@ -1,7 +1,7 @@
 "use client"
 
 import { scrapeAndStoreProduct } from '@/lib/actions';
-import { FormEvent, useState } from 'react'
+import { FormEvent, useState, useEffect } from 'react'
 
 const isValidAmazonProductURL = (url: string) => {
   try {
@@ -25,6 +25,15 @@ const isValidAmazonProductURL = (url: string) => {
 const Searchbar = () => {
   const [searchPrompt, setSearchPrompt] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [searchResult, setSearchResult] = useState('');
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSearchResult('');
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [searchResult]);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -37,34 +46,45 @@ const Searchbar = () => {
       setIsLoading(true);
 
       const product = await scrapeAndStoreProduct(searchPrompt);
+      setSearchResult('Product added to trending section!');
+      setSearchPrompt('');
     } catch (error) {
       console.log(error);
+      setSearchResult('Error adding the product. Please try again.');
     } finally {
       setIsLoading(false);
     }
   }
 
   return (
-    <form 
-      className="flex flex-wrap gap-4 mt-12" 
-      onSubmit={handleSubmit}
-    >
-      <input 
-        type="text"
-        value={searchPrompt}
-        onChange={(e) => setSearchPrompt(e.target.value)}
-        placeholder="Enter product link"
-        className="searchbar-input"
-      />
-
-      <button 
-        type="submit" 
-        className="searchbar-btn"
-        disabled={searchPrompt === ''}
+    <div>
+      <form
+        className="flex flex-wrap gap-4 mt-12"
+        onSubmit={handleSubmit}
       >
-        {isLoading ? 'Searching...' : 'Search'}
-      </button>
-    </form>
+        <input
+          type="text"
+          value={searchPrompt}
+          onChange={(e) => setSearchPrompt(e.target.value)}
+          placeholder="Enter product link"
+          className="searchbar-input"
+        />
+
+        <button
+          type="submit"
+          className="searchbar-btn"
+          disabled={searchPrompt === '' || isLoading}
+        >
+          {isLoading ? 'Searching...' : 'Search'}
+        </button>
+      </form>
+
+      {searchResult && (
+        <div className="flex flex-col justify-center bg-white rounded-full mt-3 max-xl:flex-col gap-16 w-10">
+          <p className="small-text rounded-full p-1">{searchResult}</p>
+        </div>
+      )}
+    </div>
   )
 }
 

@@ -11,7 +11,7 @@ const Home = async () => {
 
   return (
     <>
-    <section className='px-6 md:px-20 py-24 bg-gradient-to-br from-amber-100/70 via-amber-500/70 to-sky-600/90'>
+    <section className='px-6 md:px-20 py-24 bg-gradient-to-br from-amber-500/70 via-sky-300/50 to-white'>
       <div className="flex max-xl:flex-col gap-16">
         <div className="flex flex-col justify-center">
           <p className='small-text rounded-full p-1'>

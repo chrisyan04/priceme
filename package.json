@@ -12,6 +12,7 @@
     "@headlessui/react": "^1.7.17",
     "axios": "^1.5.1",
     "cheerio": "^1.0.0-rc.12",
+    "framer-motion": "^10.16.4",
     "mongodb": "^6.1.0",
     "mongoose": "^7.5.3",
     "next": "latest",
@@ -19,7 +20,9 @@
     "react": "latest",
     "react-dom": "latest",
     "react-responsive-carousel": "^3.2.23",
-    "supports-color": "^8.1.1"
+    "supports-color": "^8.1.1",
+    "typed-js": "^0.2.3",
+    "typed.js": "^2.0.16"
   },
   "devDependencies": {
     "@types/node": "latest",

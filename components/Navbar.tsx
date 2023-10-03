@@ -17,14 +17,15 @@ const Navbar = () => {
                 src="assets/icons/logo.svg"
                 width={27}
                 height={27}
-                alt="logo" />
+                alt="logo"
+                className='bg-white-100 rounded-full p-0.5' />
 
                 <p className='nav-logo'>
                     Price<span className='text-amber-500'>Me</span>
                 </p>
             </Link>
 
-            <div className="flex items-center gap-5 bg-white-100 p-1 rounded-full">
+            <div className="flex items-center gap-7 bg-gradient-to-br from-amber-500/70 via-sky-300/50 to-white p-2 rounded-full pl-3 pr-3">
                 {navIcons.map((icon) => (
                     <Image
                     key={icon.alt}
@@ -32,7 +33,7 @@ const Navbar = () => {
                     alt={icon.alt}
                     width={28}
                     height={28}
-                    className='object-contain' />
+                    className='object-contain bg-white rounded-full p-1' />
                 ))}
             </div>
         </nav>
