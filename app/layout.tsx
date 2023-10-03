@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className='max-w-10xl mx-auto bg-gradient-to-br from-amber-100 via-amber-500 to-sky-600'>
+        <main className='max-w-full mx-auto bg-white'>
           <Navbar />
           {children}
         </main>

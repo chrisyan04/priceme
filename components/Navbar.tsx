@@ -10,7 +10,7 @@ const navIcons = [
 
 const Navbar = () => {
   return (
-    <header className='w-full'>
+    <header className='w-full bg-black/90'>
         <nav className='nav'>
             <Link href="/" className="flex items-center gap-1">
                 <Image 
@@ -20,11 +20,11 @@ const Navbar = () => {
                 alt="logo" />
 
                 <p className='nav-logo'>
-                    Price<span className='text-primary'>Me</span>
+                    Price<span className='text-amber-500'>Me</span>
                 </p>
             </Link>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 bg-white-100 p-1 rounded-full">
                 {navIcons.map((icon) => (
                     <Image
                     key={icon.alt}
