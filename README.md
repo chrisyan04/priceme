@@ -26,5 +26,5 @@ Feel free to contribute to the project or report any issues you encounter. We're
 
 ### Happy shopping with PriceMe!
 
-Disclaimer: ❗
+### Disclaimer ❗
 This project is only a beta release. Future releases will present a more complete version of PriceMe with account logins, additional features such as removing products and much more. Feel free to stay up to date with PriceMe by starring this repo 🙂.
